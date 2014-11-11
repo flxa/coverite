@@ -1,0 +1,4 @@
+coverite
+========
+
+Coverite website template
