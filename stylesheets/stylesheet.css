@@ -1,7 +1,7 @@
-@import url(material/style.css);
 /*
 *  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
 */
+@import url(material/style.css);
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -86,11 +86,15 @@ input, select {
 
 body {
   margin: 0;
-  background: #282828;
-  color: #fff;
+  background: white url("../images/Wheelchair-in-Hallway.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #121212;
   font-size: 16px;
   font-family: sans-serif;
-  font-family: "Raleway",sans-serif;
+  font-family: "Helvetica Neue",Helvetica, sans-serif;
 }
 
 .clearfix:after, .top-menu:after, .top-menu ul:after, .productGrid:after, .productGrid .card-product:after, .productGrid .rateAnchor:after {
@@ -105,8 +109,8 @@ body {
 }
 
 .top-menu {
-  padding: 1.2em;
-  background: #1b1b1b;
+  padding: 2em;
+  background: transparent;
 }
 .top-menu ul {
   padding: 0;
@@ -137,10 +141,14 @@ body {
   border-right: none;
 }
 
+a.close {
+  display: none;
+}
+
 .top-right-menu {
   position: absolute;
   right: 1em;
-  top: 1em;
+  top: 1.7em;
   display: none;
 }
 @media (min-width: 600px) {
@@ -151,7 +159,7 @@ body {
 @media (max-width: 600px) {
   .top-right-menu.show {
     width: 100%;
-    background: #282828;
+    background: white;
     margin: 0;
     padding: 2em;
     top: 0;
@@ -178,6 +186,7 @@ body {
     margin: 0;
     /*position: relative;*/
     display: inline-block;
+    display: inline-block;
     padding: 0;
     font-size: 2em;
     width: 1.2em;
@@ -186,11 +195,16 @@ body {
     text-align: center;
   }
 }
+@media (max-width: 600px) and (min-width: 600px) {
+  .top-right-menu.show a.close {
+    display: none;
+  }
+}
 
 .tr-menu-trigger {
   display: block;
   position: absolute;
-  top: .5em;
+  top: 1.7em;
   right: .5em;
   width: 2em;
   text-indent: -.35em;
@@ -209,11 +223,11 @@ body {
 }
 
 .deco-border {
-  box-shadow: 0 0 0 10px rgba(253, 178, 19, 0.85), 0 0 0 20px #282828, 0 0 0 30px rgba(255, 212, 0, 0.85), 0 0 0 40px #282828, 0 0 0 50px rgba(253, 178, 19, 0.85);
+  box-shadow: 0 0 0 10px rgba(189, 23, 23, 0.85), 0 0 0 20px white, 0 0 0 30px rgba(255, 212, 0, 0.85), 0 0 0 40px white, 0 0 0 50px rgba(189, 23, 23, 0.85);
 }
 
 .logo {
-  text-align: center;
+  text-align: left;
   font-size: .8em;
 }
 @media (min-width: 600px) {
@@ -223,7 +237,6 @@ body {
 }
 .logo h1 {
   display: inline-block;
-  background: #282828;
   margin: 0;
   padding: 0 .5em 0 .3em;
   text-align: center;
@@ -233,9 +246,6 @@ body {
   text-decoration: none;
   color: white;
   font-size: 2.5em;
-  background-image: linear-gradient(to bottom, #e58424, #ffd400 53%, #fdb213 94%, #e58424 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -249,42 +259,29 @@ body {
   }
 }
 .logo a:before {
-  outline: 1px solid red;
   display: block;
-}
-.logo a span.capV {
-  display: inline-block;
-  font-size: 1.2em;
-  top: .08em;
-  left: .08em;
-  position: relative;
-  transform: translate(0 40px);
-  background-image: linear-gradient(to bottom, #e58424, #ffd400 53%, #fdb213 94%, #e58424 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.logo a span.capR {
-  display: inline-block;
-  font-size: 1.2em;
-  top: .1em;
-  position: relative;
-  transform: translate(0 40px);
-  background-image: linear-gradient(to bottom, #e58424, #ffd400 53%, #fdb213 94%, #e58424 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .logo img {
   display: block;
   margin: 0 auto;
+  max-width: 240px;
+  position: relative;
+  top: -10px;
+  left: -18px;
+  margin: 0;
 }
 
 .content {
-  padding-top: 150px;
+  padding: 100px 1em;
   padding-bottom: 150px;
+}
+.content .card {
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .deco-strip, #logo.deco-strip {
-  background: linear-gradient(to bottom, #282828, #282828 10px, #fdb213 10px, #fdb213 20px, #282828 20px, #282828 30px, #fdb213 30px, #fdb213 40px, #282828 40px, #282828 50px, #fdb213 50px, #fdb213 60px, #282828 60px, #282828 70px, #fdb213 70px, #fdb213 80px);
+  background: linear-gradient(to bottom, white, white 10px, #bd1717 10px, #bd1717 20px, white 20px, white 30px, #bd1717 30px, #bd1717 40px, white 40px, white 50px, #bd1717 50px, #bd1717 60px, white 60px, white 70px, #bd1717 70px, #bd1717 80px);
   background-size: 160px 68px;
   background-repeat-y: no-repeat;
 }
@@ -309,9 +306,9 @@ body {
   padding: 1.5em;
   margin: 4em auto;
   text-align: center;
-  background: #282828;
+  background: white;
   transition: all .25s ease-in-out;
-  box-shadow: 0 0 0 10px rgba(253, 178, 19, 0.85), 0 0 0 20px #282828, 0 0 0 30px rgba(255, 212, 0, 0.85), 0 0 0 40px #282828, 0 0 0 50px rgba(253, 178, 19, 0.85);
+  box-shadow: 0 0 0 10px rgba(189, 23, 23, 0.85), 0 0 0 20px white, 0 0 0 30px rgba(255, 212, 0, 0.85), 0 0 0 40px white, 0 0 0 50px rgba(189, 23, 23, 0.85);
 }
 @media (min-width: 600px) {
   .overlay .deco {
@@ -333,7 +330,7 @@ body {
   }
 }
 .overlay .deco:hover {
-  box-shadow: 0 0 0 10px #fdb213, 0 0 0 20px #282828, 0 0 0 30px #ffd400, 0 0 0 40px #282828, 0 0 0 50px #fdb213;
+  box-shadow: 0 0 0 10px #bd1717, 0 0 0 20px white, 0 0 0 30px #ffd400, 0 0 0 40px white, 0 0 0 50px #bd1717;
 }
 .overlay .deco p {
   margin-bottom: 1em;
@@ -353,8 +350,8 @@ body {
 
 .btn {
   text-decoration: none;
-  color: #e58424;
-  border: 0.1em solid #e58424;
+  color: #bd1717;
+  border: 0.1em solid #bd1717;
   padding: .2em .75em;
   border-radius: 1em;
   line-height: 1.5;
@@ -364,33 +361,33 @@ body {
 }
 
 .btn-primary {
-  color: #fdb213;
-  border-color: #fdb213;
+  color: #bd1717;
+  border-color: #bd1717;
 }
 .btn-primary:hover {
-  color: #282828;
-  background: linear-gradient(to bottom, #e58424, #ffd400 53%, #fdb213 94%, #e58424 100%);
-  border-color: #fdb213;
-  border-top-color: #e58424;
-  border-bottom-color: #e58424;
+  color: white;
+  background: linear-gradient(to bottom, #bd1717, #ffd400 53%, #bd1717 94%, #bd1717 100%);
+  border-color: #bd1717;
+  border-top-color: #bd1717;
+  border-bottom-color: #bd1717;
 }
 .btn-primary:active {
-  color: #282828;
-  background: #e58424;
-  border-color: #e58424;
+  color: white;
+  background: #bd1717;
+  border-color: #bd1717;
 }
 
 .btn-dark {
-  color: #e58424;
-  border-color: #e58424;
+  color: #bd1717;
+  border-color: #bd1717;
 }
 .btn-dark:hover {
-  color: #282828;
-  background: #bf6b17;
-  border-color: #bf6b17;
+  color: white;
+  background: #901111;
+  border-color: #901111;
 }
 .btn-dark:active {
-  color: #282828;
+  color: white;
   background: #ffd400;
   border-color: #ffd400;
 }
@@ -399,8 +396,8 @@ body {
   position: fixed;
   width: 100%;
   font-size: 14px;
-  color: #e58424;
-  background: rgba(40, 40, 40, 0.9);
+  color: #bd1717;
+  background: rgba(255, 255, 255, 0.9);
   margin: 0;
   bottom: 0;
 }

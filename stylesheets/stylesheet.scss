@@ -21,9 +21,10 @@ input,select{vertical-align:middle}
 }
 @import 'material/style.css';
 
-$bgcolor: rgb(40,40,40);
-$brand-primary-color: #fdb213;
-$brand-dark-color: #e58424;
+$bgcolor: white;
+$top-menu-color: transparent;
+$brand-primary-color: #BD1717;
+$brand-dark-color: #BD1717;
 $brand-light-color: #ffd400;
 $brand-hilite-color: #fbf2e5;
 $gold-shine: linear-gradient(
@@ -37,11 +38,15 @@ $opacity: .85;
 
 body {
 	margin: 0;
-	background: $bgcolor;
-	color: #fff;
+	background: $bgcolor url('../images/Wheelchair-in-Hallway.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	color: #121212;
 	font-size: 16px;
 	font-family: sans-serif;
-	font-family: "Raleway",sans-serif;
+	font-family: "Helvetica Neue",Helvetica, sans-serif;
 	p {
 
 	}
@@ -60,8 +65,8 @@ body {
 
 .top-menu {
 	@extend .clearfix;
-	padding: 1.2em;
-	background: darken($bgcolor,5%);
+	padding: 2em;
+	background: $top-menu-color;
 	ul {
 		padding: 0;
 		text-align: center;
@@ -92,10 +97,13 @@ body {
 		}
 	}
 }
+a.close {
+	display: none;
+}
 .top-right-menu {
 	position: absolute;
 	right: 1em;
-	top: 1em;
+	top: 1.7em;
 	display: none;
 	@media (min-width: 600px) {
 		display: block;
@@ -129,6 +137,10 @@ body {
 				margin: 0;
 				/*position: relative;*/
 				display: inline-block;
+				@media(min-width: 600px) {
+					display: none;
+				}
+				display: inline-block;
 				padding: 0;
 				font-size: 2em;
 				width: 1.2em;
@@ -142,7 +154,7 @@ body {
 .tr-menu-trigger {
 	display: block;
 	position: absolute;
-	top: .5em;
+	top: 1.7em;
 	right: .5em;
 	width: 2em;
 	text-indent: -.35em;
@@ -167,14 +179,13 @@ body {
 }
 
 .logo {
-	text-align: center;
+	text-align: left;
 	font-size: .8em;
 	@media (min-width: 600px) {
 		font-size: 16px;
 	}
 	h1 {
 		display: inline-block;
-		background: $bgcolor;
 		margin: 0;
 		padding: 0 .5em 0 .3em;
 		text-align: center;
@@ -187,9 +198,6 @@ body {
 		@media (min-width: 600px) {
 			font-size: 4em;
 		}
-		background-image: $gold-shine;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
 		margin: 0;
 		padding: 0;
 		line-height: 1;
@@ -197,40 +205,27 @@ body {
 		position: relative;
 		top: -10px;
 		&:before {
-			outline: 1px solid red;
 			display: block;
-		}
-		span.capV {
-			display: inline-block;
-			font-size: 1.2em;
-			top: .08em;
-			left: .08em;
-			position: relative;
-			transform: translate(0 40px);
-			background-image: $gold-shine;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-		span.capR {
-			display: inline-block;
-			font-size: 1.2em;
-			top: .1em;
-			position: relative;
-			transform: translate(0 40px);
-			background-image: $gold-shine;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
 		}
 	}
 	img {
 		display: block;
 		margin: 0 auto;
+		max-width: 240px;
+		position: relative;
+		top: -10px;
+		left: -18px;
+		margin: 0;
 	}
 }
 
 .content {
-	padding-top: 150px;
+	padding: 100px 1em;
 	padding-bottom: 150px;
+	.card {
+		padding: 1em;
+		background: rgba($bgcolor,.9);
+	}
 }
 
 .deco-strip, #logo.deco-strip {
