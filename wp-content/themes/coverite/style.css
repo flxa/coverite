@@ -1,0 +1,184 @@
+@import url("../twentyfifteen/style.css");
+@import url(material/style.css);
+/*
+ Theme Name:   Coverite Themplate
+ Theme URI:    http://flxa.co/
+ Description:  Coverite Theme
+ Author:       Nick Fletcher
+ Author URI:   http://flxa.co
+ Template:     twentyfifteen
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  coverite
+*/
+/*
+*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /*background: transparent url('../images/Wheelchair-in-Hallway.jpg');*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #121212;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-family: "Helvetica Neue",Helvetica, sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+body:before {
+  background-color: transparent;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.site a {
+  color: #b42124;
+}
+.site a:hover {
+  color: #e15a5d;
+}
+.site .site-description {
+  font-size: 1.2em;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+}
+.site .entry-title {
+  margin-bottom: .5em;
+  padding-top: 1em;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.site .sidebar {
+  background: #232021;
+  color: white;
+}
+.site .sidebar a, .site .sidebar p, .site .sidebar h2 {
+  font-size: .9em;
+}
+@media (min-width: 600px) {
+  .site .sidebar .site-header {
+    margin: 1em;
+    padding: 0;
+  }
+}
+.site .sidebar .secondary {
+  background: #232021;
+}
+.site .sidebar .secondary .widget {
+  margin: 1em 0;
+  padding: 0 1em;
+}
+.site .sidebar .secondary .widget .widget-title {
+  color: #cccccc;
+}
+.site .sidebar .site-branding {
+  background: #232021;
+  color: white;
+}
+.site .sidebar .site-branding p {
+  padding-bottom: 1em;
+}
+.site .sidebar .site-header {
+  background-color: transparent;
+  border-bottom: none;
+}
+.site .sidebar .secondary-toggle {
+  border-color: white;
+}
+.site .sidebar .secondary-toggle:before {
+  color: white;
+}
+.site .sidebar .site-info {
+  text-align: center;
+}
