@@ -96,6 +96,9 @@ body {
 		.site-branding {
 			background: $sidebar-bg;
 			color: $sidebar-text;
+			p {
+				padding-bottom: 1em;
+			}
 		}
 		.site-header {
 			background-color: transparent;
