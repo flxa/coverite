@@ -86,7 +86,7 @@ input, select {
 
 body {
   margin: 0;
-  background: white url("../images/Wheelchair-in-Hallway.jpg");
+  background: transparent url("../images/Wheelchair-in-Hallway.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -95,6 +95,12 @@ body {
   font-size: 16px;
   font-family: sans-serif;
   font-family: "Helvetica Neue",Helvetica, sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+body:before {
+  background-color: transparent;
 }
 
 .clearfix:after {
@@ -103,12 +109,18 @@ body {
   clear: both;
 }
 
+.site a {
+  color: #b42124;
+}
+.site a:hover {
+  color: #e15a5d;
+}
 .site .sidebar {
   background: #232021;
   color: white;
 }
-.site .sidebar a {
-  color: white;
+.site .sidebar a, .site .sidebar p, .site .sidebar h2 {
+  font-size: .9em;
 }
 @media (min-width: 600px) {
   .site .sidebar .site-header {
