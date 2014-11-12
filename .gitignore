@@ -1,0 +1,14 @@
+*.log
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+wp-config.php
+wp-admin/
+wp-includes/
+wp-content/plugins/
+wp-content/themes/twentyeleven/
+wp-content/themes/twentyfifteen/
+wp-content/themes/twentyfourteen/
+wp-content/themes/twentyten/
+wp-content/themes/twentythirteen/
+wp-content/themes/twentytwelve/
